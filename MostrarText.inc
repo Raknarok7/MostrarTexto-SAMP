@@ -1,18 +1,13 @@
 /*
-	ShowInfoForPlayer include by Richie©.
+	Mostrar texto  | @Raknarok7
 	
-	If you dont want to use y_hooks you can
-	move the code from OnPlayerDisconnect(playerid, reason)
-	and OnPlayerConnect(playerid) to those callbacks in
-	your script. 
-	
-	To use it, place it under your other includes.
+
 */
 #include <YSI\y_hooks>
 
 new PlayerText:InfoText[MAX_PLAYERS],
 	InfoTimer[MAX_PLAYERS],
-	InfoTextShowing[MAX_PLAYERS]; // var if you need other parts of your script to know if the Info Message is showing for the player.
+	InfoTextShowing[MAX_PLAYERS]; 
 
 
 hook OnPlayerDisconnect(playerid, reason)
@@ -38,7 +33,7 @@ hook OnPlayerConnect(playerid)
 	return 1;
 }
 
-stock ShowInfoForPlayer(playerid, text[], time) // playerid to show, text to show, time to show in ms
+stock MostrarTexto(playerid, text[], time) // playerid, texto, tiempo
 {
 	KillTimer(InfoTimer[playerid]);
     PlayerTextDrawHide(playerid, InfoText[playerid]);
