@@ -12,7 +12,7 @@ return 0;
 
 CMD:test(playerid) {
 
-ShowInfoForPlayer(playerid, "Welcome i am raknarok", 3000); // el "3000" es el tiempo.
+MostrarTexto(playerid, "Welcome i am raknarok", 3000); // el "3000" es el tiempo.
 
 
 return 1;
