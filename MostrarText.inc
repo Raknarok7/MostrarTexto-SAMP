@@ -18,7 +18,7 @@ hook OnPlayerDisconnect(playerid, reason)
 
 hook OnPlayerConnect(playerid)
 {
-	// Create the textdraw
+
 	InfoText[playerid] = CreatePlayerTextDraw(playerid, 319.999938, 401.955749, "_");
 	PlayerTextDrawLetterSize(playerid, InfoText[playerid], 0.241999, 1.280593);
 	PlayerTextDrawAlignment(playerid, InfoText[playerid], 2);
@@ -44,7 +44,7 @@ stock MostrarTexto(playerid, text[], time) // playerid, texto, tiempo
 	return 1;
 }
 
-forward HideInfoForPlayer(playerid); // Hide the info message for player.
+forward HideInfoForPlayer(playerid);
 public HideInfoForPlayer(playerid)
 {
 	if(!IsPlayerConnected(playerid)) return 1;
